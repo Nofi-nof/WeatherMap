@@ -39,7 +39,7 @@ function ajaxRequest(lat, long) {
       console.log('国名' + data.city.country)
 
       //天気予報データ
-      data.list.forEach(function (forecast, index) {
+      data.list.forEach((forecast) => {
         const dateTime = new Date(utcToJSTime(forecast.dt))
         const month = dateTime.getMonth() + 1
         const date = dateTime.getDate()
@@ -49,7 +49,7 @@ function ajaxRequest(lat, long) {
         const description = forecast.weather[0].description
         const iconPath = `images/${forecast.weather[0].icon}.svg`
 
-        console.log('日時：' + '${month}/${date} ${hours}:${min}')
+        console.log('日時：' + `${month}/${date} ${hours}:${min}`)
         console.log('気温：' + temperature)
         console.log('天気：' + description)
         console.log('画像パス：' + iconPath)
