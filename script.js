@@ -48,7 +48,7 @@ function ajaxRequest(lat, long) {
         const min = String(dateTime.getMinutes()).padStart(2, '0')
         const temperature = Math.round(forecast.main.temp)
         const description = forecast.weather[0].description
-        const iconPath = `images/${forecast.weather[0].icon}.png`
+        const iconPath = `assets/images/${forecast.weather[0].icon}.png`
 
         //console.log('日時：' + `${month}/${date} ${hours}:${min}`)
         //console.log('気温：' + temperature)
