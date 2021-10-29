@@ -37,7 +37,7 @@ function ajaxRequest(lat, long) {
       //都市名・国名
       //console.log('都市名' + data.city.name)
       //console.log('国名' + data.city.country)
-      $('#place').text(data.city.name + ',' + data.city.country)
+      $('.place').text(data.city.name + ',' + data.city.country)
 
       //天気予報データ
       data.list.forEach((forecast, index) => {
@@ -65,18 +65,20 @@ function ajaxRequest(lat, long) {
                 <span class="temp">${temperature}</span>℃
               </p>
             </div>`
-          $('#weather').html(currentWeather)
+          $('.weather').html(currentWeather)
         } else {
           const tableRow = `
-          <tr>
-            <td class="info>
-            ${month}/${date} ${hours}:${min}
-            </td>
-            <td class="icon"><img src="${iconPath}"></td>
-            <td><span class="description">${description}</span></td>
-            <td><span class="temp">${temperature}℃</span></td>
-          </tr>`
-          $('#forecast').append(tableRow)
+          <div class="forecast_container>
+            <tr class="forecast_table">
+              <td class="info">
+              ${month}/${date} ${hours}:${min}
+              </td>
+              <td class="icon"><img src="${iconPath}"></td>
+              <td><span class="description">${description}</span></td>
+              <td><span class="temp">${temperature}℃</span></td>
+            </tr>
+          </div>`
+          $('.forecast').append(tableRow)
         }
       })
     })
