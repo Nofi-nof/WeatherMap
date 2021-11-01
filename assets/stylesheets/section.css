@@ -1,18 +1,16 @@
 .place {
   text-align: center;
 }
-.icon {
+
+.currentWeather__container {
+  max-width: 1024px;
   display: flex;
   justify-content: center;
 }
 
-.info {
+.forecast__container {
   display: flex;
-  justify-content: center;
-}
-
-.forecast_container {
-  display: flex;
+  flex-direction: column;
   justify-content: center;
   max-width: 1024px;
 }

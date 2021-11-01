@@ -58,17 +58,19 @@ function ajaxRequest(lat, long) {
         //現在の天気とそれ以外で出力を変える
         if (index === 0) {
           const currentWeather = `
+          <div class="currentWeather__container">
             <div class="icon"><img src="${iconPath}"></div>
             <div class="info">
               <p>
                 <span class="description">現在の天気：${description}</span>
                 <span class="temp">${temperature}</span>℃
               </p>
-            </div>`
+            </div>
+          </div>`
           $('.weather').html(currentWeather)
         } else {
           const tableRow = `
-          <div class="forecast_container>
+          <div class="forecast__container>
             <tr class="forecast_table">
               <td class="info">
               ${month}/${date} ${hours}:${min}
