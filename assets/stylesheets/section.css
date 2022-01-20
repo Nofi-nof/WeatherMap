@@ -2,9 +2,12 @@
   text-align: center;
 }
 
+.icon {
+}
+
 .currentWeather__container {
-  max-width: 1024px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 

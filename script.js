@@ -72,9 +72,7 @@ function ajaxRequest(lat, long) {
           const tableRow = `
           <div class="forecast__container>
             <tr class="forecast_table">
-              <td class="info">
-              ${month}/${date} ${hours}:${min}
-              </td>
+              <td class="info">${month}/${date} ${hours}:${min}</td>
               <td class="icon"><img src="${iconPath}"></td>
               <td><span class="description">${description}</span></td>
               <td><span class="temp">${temperature}℃</span></td>
