@@ -31,6 +31,7 @@ function ajaxRequest(lat, long) {
       lang: 'ja',
     },
   })
+
     .done(function (data) {
       //console.log(data)
 
@@ -62,7 +63,7 @@ function ajaxRequest(lat, long) {
             <div class="icon"><img src="${iconPath}"></div>
             <div class="info">
               <p>
-                <span class="description">現在の天気：${description}</span>
+                <span class="description">現在の天気:${description}</span>
                 <span class="temp">${temperature}</span>℃
               </p>
             </div>
